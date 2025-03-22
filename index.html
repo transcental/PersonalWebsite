@@ -1,43 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>transcental</title>
-        <style>
-            body {
-                font-family: 'Comic Sans MS', cursive, sans-serif;
-                text-align: center;
-                margin-top: 20%;
-                background-color: #221F4D;
-                color: #fff;
-            }
-            h1 {
-                font-size: 3em;
-                margin-bottom: 0;
-            }
-            p {
-                font-size: 1.5em;
-                margin-top: 0;
-            }
-            a {
-                color: #007bff;
-                text-decoration: none;
-            }
-            li {
-                list-style-type: none;
-                margin-bottom: 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>transcental's trash</h1>
-        <p>oh sorry there's nothing here and maybe never will be.</br>here's some of my stuff:</p>
-        <ul>
-            <li><a href='https://github.com/transcental' target='_blank'>github</a></li>
-            <li><a href='https://monzo.me/dillonbarnes4' target='_blank'>donate (uk only)</a></li>
-            <li><a href='https://buymeacoffee.com/transcental' target='_blank'>donate (rest of the world)</a></li>
-            <li><a href='https://hackclub.slack.com/team/U054VC2KM9P' target='_blank'>hack club slack profile</a></li>
-        </ul>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transcental</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="c">
+      <h1>transcental's space</h1>
+      <p>
+        welcome to my little corner of the internet. <br />
+        here are some of my funny links
+      </p>
+      <ul class="l">
+        <li>
+          <a href="https://github.com/transcental" target="_blank">
+            <img src="svg/github.svg" alt="GitHub" />
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://hackclub.slack.com/team/U054VC2KM9P" target="_blank">
+            <img src="svg/hackclub.svg" alt="Hack Club" />
+            Hack Club Slack
+          </a>
+        </li>
+        <li>
+          <a href="https://monzo.me/dillonbarnes4" target="_blank">
+            <img src="svg/monzo.svg" alt="Monzo" />
+            Donate (UK)
+          </a>
+        </li>
+        <li>
+          <a href="https://buymeacoffee.com/transcental" target="_blank">
+            <img src="svg/buymeacoffee.svg" alt="Buy Me A Coffee" />
+            Donate (Worldwide)
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script>
+      function a() {
+        const bg = document.querySelector(".bg");
+        for (let i = 0; i < 15; i++) {
+          const b = document.createElement("div");
+          b.classList.add("b");
+          const s = Math.random() * 150 + 50;
+          b.style.width = `${s}px`;
+          b.style.height = `${s}px`;
+          b.style.left = `${Math.random() * 100}%`;
+          b.style.top = `${Math.random() * 100}%`;
+          const duration = Math.random() * 10 + 5;
+          b.style.animationDuration = `${duration}s`;
+          b.style.animationDelay = `${Math.random() * 5}s`;
+          bg.appendChild(b);
+        }
+      }
+      window.addEventListener("load", a);
+    </script>
+  </body>
 </html>
